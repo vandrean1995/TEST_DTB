@@ -20,9 +20,9 @@
                 <th>Delete</th>
               <tr>
                 <td>Dashboard</td>
-                <td><input name="user_book-c" type="checkbox"></td>
-                <td><input name="user_book-r" type="checkbox"></td>
-                <td><input name="user_book-u" type="checkbox"></td>
+                <td><input name="dashboard-c" type="checkbox"></td>
+                <td><input name="dashboard-r" type="checkbox"></td>
+                <td><input name="dashboard-u" type="checkbox"></td>
               </tr>
               <tr>
                 <td>Group</td>

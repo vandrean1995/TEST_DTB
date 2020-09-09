@@ -18,23 +18,11 @@ class GroupController extends Controller
 
     public function access( $input ){
         $access = array(
-            'author'   => array(
-                'c' => ( isset($input['author-c']) ) ? true : false,
-                'r' => ( isset($input['author-r']) ) ? true : false,
-                'u' => ( isset($input['author-u']) ) ? true : false,
-                'd' => ( isset($input['author-d']) ) ? true : false
-            ),
-            'book'   => array(
-                'c' => ( isset($input['book-c']) ) ? true : false,
-                'r' => ( isset($input['book-r']) ) ? true : false,
-                'u' => ( isset($input['book-u']) ) ? true : false,
-                'd' => ( isset($input['book-d']) ) ? true : false
-            ),
-            'user_book'   => array(
-                'c' => ( isset($input['user_book-c']) ) ? true : false,
-                'r' => ( isset($input['user_book-r']) ) ? true : false,
-                'u' => ( isset($input['user_book-u']) ) ? true : false,
-                'd' => ( isset($input['user_book-d']) ) ? true : false
+            'dashboard'   => array(
+                'c' => ( isset($input['dashboard-c']) ) ? true : false,
+                'r' => ( isset($input['dashboard-r']) ) ? true : false,
+                'u' => ( isset($input['dashboard-u']) ) ? true : false,
+                'd' => ( isset($input['dashboard-d']) ) ? true : false
             ),
             'group' => array(
                 'c' => ( isset($input['group-c']) ) ? true : false,
@@ -47,7 +35,27 @@ class GroupController extends Controller
                 'r' => ( isset($input['user-r']) ) ? true : false,
                 'u' => ( isset($input['user-u']) ) ? true : false,
                 'd' => ( isset($input['user-d']) ) ? true : false
-            )
+            ),
+            'author'   => array(
+                'c' => ( isset($input['author-c']) ) ? true : false,
+                'r' => ( isset($input['author-r']) ) ? true : false,
+                'u' => ( isset($input['author-u']) ) ? true : false,
+                'd' => ( isset($input['author-d']) ) ? true : false
+            ),
+            'category'   => array(
+                'c' => ( isset($input['category-c']) ) ? true : false,
+                'r' => ( isset($input['category-r']) ) ? true : false,
+                'u' => ( isset($input['category-u']) ) ? true : false,
+                'd' => ( isset($input['category-d']) ) ? true : false
+            ),
+            'book'   => array(
+                'c' => ( isset($input['book-c']) ) ? true : false,
+                'r' => ( isset($input['book-r']) ) ? true : false,
+                'u' => ( isset($input['book-u']) ) ? true : false,
+                'd' => ( isset($input['book-d']) ) ? true : false
+            ),
+            
+            
         );
 
         return json_encode( $access );

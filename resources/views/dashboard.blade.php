@@ -45,7 +45,8 @@
             </th>
             <th> Borrower </th>
             <th> Book </th>
-            <th> Date of due || Date of return </th>
+            <th> Date of due</th>
+            <th> Date of return </th>
             <th> Approval rent & return </th>
             <th> Status </th>
             <th> Actions </th>
@@ -62,7 +63,8 @@
             </td>
             <td class="sorting_1">{{ $data->user->name }}</td>
             <td>{{ $data->book->name }}</td>
-            <td>{{ $data->date_start }} || {{ $data->date_end }} </td>
+            <td>{{ $data->date_start }}</td>
+            <td>{{ $data->date_end }} </td>
             <td>{{ $data->giver->name }} @if($data->taker_id != null) || {{ $data->taker->name }} @else || <code>Belum Diterima</code> @endif</td>
             @if($data->status == 'dipinjam')
             <td><span class="label label-sm label-warning">On loan</span></td>

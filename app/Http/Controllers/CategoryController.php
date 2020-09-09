@@ -18,7 +18,8 @@ class CategoryController extends Controller
         $data ['title']         	= "Category Management";
         $data ['category']        	= Category::where('is_delete', 'N')->with('book')->get();
         $data ['role']          	= json_decode(User::where('id',Auth::user()->id)->with('group')->first()->group->privilege);
-        // dd($data['author']->toArray());
+        // dd($data['role']);
+
         return view( 'category.index', $data );
     }
 

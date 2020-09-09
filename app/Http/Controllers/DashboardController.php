@@ -19,6 +19,7 @@ class DashboardController extends Controller
         $data ['title']         = "Dashboard";
         $data ['user_book']     = UserBook::with('user', 'book')->get();
         $data ['role']          = json_decode(User::where('id',Auth::user()->id)->with('group')->first()->group->privilege);
+        // dd($data['user_book']);
         return view( 'dashboard', $data );
     }
 
@@ -48,7 +49,7 @@ class DashboardController extends Controller
         $validator = Validator::make( $input, $rules );
         if( $validator->passes() ){
             $input['giver_id']  = Auth::user()->id;
-            //reduce stock on book
+            
             $book = Book::find( $input['book_id'] );
             $book->save();
 

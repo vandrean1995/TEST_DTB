@@ -45,8 +45,7 @@
             </th>
             <th> Name </th>
             <th> Author </th>
-            <th> Synopsist </th>
-            <th> Stock </th>
+            <th> Position </th>
             <th> Actions </th>
           </tr>
         </thead>
@@ -61,8 +60,7 @@
             </td>
             <td class="sorting_1">{{ $data->name }}</td>
             <td>{{$data->author->name}}</td>
-            <td></td>
-            <td>{{$data->stock}}</td>
+            <td>{{$data->place}}</td>
             <td align="center">
             @if( $role->book->u == true )
               <a href="{{ route('book.update', \Crypt::encrypt( $data->id )) }}" class="btn btn-warning btn-md spawnModal" data-toggle="modal" data-target="#updateModal">Update</a>

@@ -56,7 +56,7 @@ class BookController extends Controller
         $validator = Validator::make( $input, $rules );
         if( $validator->passes() ){
             $book = Book::create( $input );
-
+            // dd($input);
             return Redirect::back();
         } else {
             $messages = $validator->messages();
@@ -82,6 +82,8 @@ class BookController extends Controller
             $book->author_id        = $input['author_id'];
             $book->category_id      = $input['category_id'];
             $book->code             = $input['code'];
+            $book->date             = $input['date'];
+            $book->place            = $input['place'];
             $book->description      = $input['description'];
             $book->save();
 

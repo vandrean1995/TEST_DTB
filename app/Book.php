@@ -17,9 +17,10 @@ class Book extends Model
         'author_id',
         'category_id',
         'code',
+        'date',
+        'place',
         'name',
         'description',
-        'stock',
     ];
 
     public function author(){

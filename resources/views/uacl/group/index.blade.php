@@ -25,6 +25,7 @@
     </div>
     <div class="portlet-body">
       <div class="table-toolbar">
+        @if ( $role->group->c == true)
         <div class="row">
           <div class="col-md-6">
               <a href="{{ route('uacl.group.create') }}" class="btn sbold green spawnModal" data-toggle="modal" data-target="#createModal">
@@ -33,6 +34,7 @@
               </a>
           </div>
         </div>
+        @endif
       </div>
       <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
         <thead>
